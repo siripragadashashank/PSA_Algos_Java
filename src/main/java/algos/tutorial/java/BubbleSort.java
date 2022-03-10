@@ -29,11 +29,13 @@ public class BubbleSort {
         int len = nums.length;
         for (int i=0; i<len-1; i++){
             for (int j=0; j< (len-1)-i; j++){
+
                 if (nums[j+1]< nums[j]){
                     int temp = nums[j+1];
                     nums[j+1] = nums[j];
                     nums[j] = temp;
                 }
+
             }
         }
         long endTime = System.nanoTime();
