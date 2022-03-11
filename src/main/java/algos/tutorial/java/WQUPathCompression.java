@@ -21,12 +21,26 @@ public class WQUPathCompression {
 
     public int find(int p){
         while(p!=prnt[p]){
-            p=prnt[p];
+            prnt[p]=prnt[prnt[p]];
+            p = prnt[p];
         }
         return p;
     }
 
     public void union(int p, int q){
+        int parentP = find(p);
+        int parentQ = find(q);
+        if (parentP==parentQ){
+            return;
+        }
+        if(sz[parentP]<sz[parentQ]){
+            prnt[parentP] = parentQ;
+            sz[parentQ] += sz[parentP];
+        }
+        else{
+            prnt[parentQ] = parentP;
+            sz[parentP]+=sz[parentQ];
+        }
         return;
     }
 
