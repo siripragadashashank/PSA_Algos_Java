@@ -2,7 +2,7 @@ package algos.tutorial.java;
 
 import java.util.Arrays;
 
-public class UnionFind {
+public class QuickFind {
     private int[] id;
 
     public void QuickFindUF(int N){
@@ -12,8 +12,7 @@ public class UnionFind {
        }
     }
 
-    public int find(int p)
-    {
+    public int find(int p) {
         return id[p];
     }
 
@@ -29,13 +28,18 @@ public class UnionFind {
         }
     }
 
+    public boolean isConnected(int p, int q){
+        return id[p]==id[q];
+    }
+
     public static void main(String args[]){
-        UnionFind uf = new UnionFind();
+        QuickFind uf = new QuickFind();
         uf.QuickFindUF(10);
         System.out.print(Arrays.toString(uf.id));
         uf.union(2, 3);
         System.out.print(Arrays.toString(uf.id));
         uf.union(1, 2);
         System.out.print(Arrays.toString(uf.id));
+        System.out.print(uf.isConnected(1, 2));
     }
 }
