@@ -21,10 +21,10 @@ public class QuickUnion {
     }
 
     public void union(int p, int q){
-        int i = find(p);
-        int j = find(q);
+        int parentP = find(p);
+        int parentQ = find(q);
 
-        prnt[i]=j;
+        prnt[parentP]=parentQ;
     }
 
     public boolean isConnected(int p, int q){

@@ -17,13 +17,13 @@ public class QuickFind {
     }
 
     public void union(int p, int q){
-        int pid = id[p];
-        int qid = id[q];
+        int parentP = id[p];
+        int parentQ = id[q];
 
         for ( int i=0; i<id.length; i++)
         {
-            if (id[i]==pid){
-                id[i]=qid;
+            if (id[i]==parentP){
+                id[i]=parentQ;
             }
         }
     }
