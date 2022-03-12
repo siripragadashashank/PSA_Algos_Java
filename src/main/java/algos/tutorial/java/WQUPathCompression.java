@@ -16,7 +16,7 @@ public class WQUPathCompression {
     }
 
     public boolean isConnected(int p, int q){
-        return prnt[p]==prnt[q];
+        return find(p)==find(q);
     }
 
     public int find(int p){
