@@ -28,7 +28,7 @@ public class QuickUnion {
     }
 
     public boolean isConnected(int p, int q){
-        return prnt[p]==prnt[q];
+        return find(p)==find(q);
     }
 
     public static void main(String args[]){
