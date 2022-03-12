@@ -22,12 +22,13 @@ public class PQ_OrderedArray<Key extends Comparable<Key>> {
         M++;
     }
     public boolean less(Key a, Key b){
-        boolean out = false;
-        return out;
+        return a.compareTo(b)<0;
     }
 
     public void swap(int a, int b){
-        return;
+        Key tmp = pq[a];
+        pq[a] = pq[b];
+        pq[b] = tmp;
     }
 
     public Key remove(){

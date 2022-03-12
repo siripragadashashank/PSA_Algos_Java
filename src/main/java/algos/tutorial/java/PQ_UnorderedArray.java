@@ -17,12 +17,14 @@ public class PQ_UnorderedArray<Key extends Comparable<Key>> {
     }
 
     public boolean less(int a, int b){
-        boolean out = false;
-        return out;
+        return pq[a].compareTo(pq[b])<0;
     }
 
+
     public void swap(int a, int b){
-        return;
+        Key tmp = pq[a];
+        pq[a] = pq[b];
+        pq[b] = tmp;
     }
     public Key remove(){
         int max=0;
