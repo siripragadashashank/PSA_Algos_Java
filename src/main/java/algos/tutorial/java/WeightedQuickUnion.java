@@ -16,7 +16,7 @@ public class WeightedQuickUnion {
     }
 
     public int find(int p){
-        if (p!=prnt[p]){
+        while (p!=prnt[p]){
             p=prnt[p];
         }
         return p;
