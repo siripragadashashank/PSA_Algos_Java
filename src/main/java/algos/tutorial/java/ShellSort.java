@@ -13,7 +13,8 @@ public class ShellSort {
         }
         while (h>=1){
             for(int i=h; i<n; i++){
-
+                for (int j = i; j >= h && less(a[j], a[j-h]); j -= h)
+                    swap(a, j, j-h);
             }
             h = h/3;
         }
